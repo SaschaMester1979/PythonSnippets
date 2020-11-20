@@ -8,9 +8,7 @@
 def FileExists(Filename):
   try:
     f = open(Filename, "r")
-    raise(FileExistsError)
     f.close()
-  except FileExistsError:
     return True
   except IsADirectoryError:
     return True
@@ -39,5 +37,3 @@ if __name__ == '__main__':
     help()
   elif len(sys.argv) > 2:
     print("Nur ein Argument erwartet.")
-
-
